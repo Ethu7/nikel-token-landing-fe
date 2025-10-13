@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-mute-button {
+  display: none !important;
+}
+
+.custom-dot-list-style {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.react-multi-carousel-dot button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d1d5db; /* Tailwind gray-300 */
+  border: none;
+  transition: background 0.3s;
+}
+
+.react-multi-carousel-dot--active button {
+  background: #2563eb; /* Tailwind blue-600 */
+}
+
+.terms p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.terms h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: 32px;
+}
+
+.terms h2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.terms h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 16px;
+}
+
+.terms h4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.terms h5 {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+.terms h6 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  margin-bottom: 8px;
+}
+
+.terms ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.terms ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+.terms ul ul,
+ol ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-left: 15px;
+}
+.terms ol ol,
+ul ol {
+  list-style-type: lower-latin;
+  list-style-position: inside;
+  margin-left: 15px;
+}
